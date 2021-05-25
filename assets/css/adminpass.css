@@ -1,0 +1,373 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* VARIABLES CSS */
+:root {
+    --header-height: 3rem;
+
+    /* Colors */
+    --first-color: #5F5F5F;
+    --first-color-alt: #404040;
+    --first-color-send: #161212;
+    --title-color: #161212;
+    --text-color: #5B5757;
+    --text-color-light: #8F8A8A;
+    --body-color: #FEFBFB;
+    --container-color: #FFF;
+    --home-color: #D9D9DB;
+
+    /* Font annd typography */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+    /* font weight */
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* margenes */
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+    /* z index */
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+}
+
+@media screen and (min-width: 968px){
+    :root{
+        --biggest-font-size: 3rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/* BASE */
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Variables Dark Theme */
+body.dark-theme{
+    --first-color-send: #181818;
+    --title-color: #f3f1f1;
+    --text-color: #d1c7c8;
+    --body-color: #090B09;
+    --container-color: #B1B1B1;
+}
+
+/* Button Dark/Light */
+.change-theme{
+    position: absolute;
+    right: 1.5rem;
+    top: 2.2rem;
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+body{
+    margin: 0 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size) ;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,h2,h3,ul,p{
+    margin: 0;
+}
+
+h2,h3{
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color)
+}
+
+h1{
+    font-weight: var(--font-semi-bold);
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto; 
+}
+
+/* CLASS CSS */
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.section-title, .section-title-center{
+    font-size: 2rem;
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: var(--mb-3);
+}
+
+/* Layout */
+.l-main{
+    overflow: hidden;
+}
+
+.bd-container{
+    max-width: 1400px;
+    width: calc(100% - 3rem);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
+
+.bd-grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.l-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+.nav__logo{
+    position: fixed;
+    padding: 20px 20px;
+}
+
+.logo{
+    width: 10rem;
+}
+
+.home{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+.about__data{
+    color: #0D47A1;
+    margin-top: 3rem;
+    margin-bottom: 5.75rem;
+    text-align: center;
+}
+
+.section-subtitle-center-makati{
+    font-size: 7rem;
+    text-transform: uppercase;
+    padding: 2rem 4rem;
+    border-bottom: solid .5rem #0D47A1;
+    margin-bottom: -4rem;
+    font-weight: 1rem;
+    font-family: 'Karla'
+}
+.about__data__makati{
+    color: #0D47A1;
+    margin-top: -3rem;
+    text-align: center;
+    
+}
+
+.about__data p{
+    text-align: left;
+}
+
+.about__marginright{
+    margin-top: -3rem;
+}
+
+.about__description span{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: #0D47A1;
+    margin-bottom: var(--mb-3);
+    
+}
+
+.section-subtitle-center{
+    margin-bottom: var(--mb-3);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.section-title-center{
+    color: #0D47A1;
+}
+
+
+.about__mission{
+    text-align: center;
+    color: #0D47A1;
+    margin-bottom: 10rem;
+}
+
+.mission-text{
+    align-items: center;
+    font-size: 2rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    line-height: 2;
+    font-weight: 500;
+    font-family: 'Karla';
+
+}
+.section-title-mission{
+    color: #0D47A1;
+    align-items: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.about__number{
+    font-size: var(--biggest-font-size);
+    color: #0D47A1;
+    display: block
+}
+
+.about__img{
+    width: 100%;
+    justify-self: center;
+}
+.login__input{
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-family: var(--body-font);
+}
+
+.login__input::placeholder{
+    font-family: var(--body-font);
+}
+
+.send__direction{
+    display: flex;
+    background-color: rgb(206, 206, 206);
+    padding: .3rem;
+    border-radius: .5rem;
+}
+
+
+/*BUTTOS*/
+.button {
+    display: inline-block;
+    background-color: #0D47A1; 
+    color: #fff;
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+}
+
+
+.button:hover{
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 359px){
+    .about__img{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .about__container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+    }
+
+    .about__img{
+        width: 100%;
+    }
+
+    .about__img{
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+
+    .section{
+        padding-top: 7rem;
+    }
+
+    .about__container{
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 968px){
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about__container{
+        column-gap: 5rem;
+    }
+
+    .about__container{
+        margin-bottom: 12rem;
+    }
+    
+}
+#logoutBtn{
+    font-size: 1.5rem;
+   color: rgb(182, 36, 36);
+   text-align: center;
+   margin-bottom: var(--mb-3);
+   float: left;
+   margin-top: 12px;
+   margin-right: 10px;
+
+}
+#logoutBtn:hover{
+   color: rgb(65, 65, 65);
+}
+
+
+/* Track */
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: #0D47A1;
+    outline: 1px solid slategrey;
+  }
